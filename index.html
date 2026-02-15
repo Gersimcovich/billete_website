@@ -132,7 +132,7 @@
         }
 
         .nav-logo img {
-            height: 56px;
+            height: 72px;
         }
 
         .nav-links {
@@ -190,9 +190,8 @@
         }
 
         .hero-image {
-            max-width: 400px;
-            margin-right: -60px;
-            overflow: hidden;
+            max-width: 280px;
+            margin-right: -40px;
         }
 
         .hero-image img {
@@ -253,6 +252,13 @@
         .hero-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 32px rgba(227, 128, 44, 0.4);
+        }
+
+        .hero-stores {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            opacity: 0.85;
         }
 
         .hero-stats {
@@ -803,8 +809,7 @@
         }
 
         .footer-logo img {
-            height: 36px;
-            filter: brightness(0) invert(1);
+            height: 40px;
         }
 
         footer p {
@@ -931,7 +936,7 @@
     <!-- NAVIGATION -->
     <nav role="navigation" aria-label="Navegación principal">
         <a href="#" class="nav-logo">
-            <img src="billete-logo-horizontal.png" alt="Billete">
+            <img src="billete-logo-full.png" alt="Billete">
         </a>
         <div class="nav-links">
             <a href="#solucion">Solución</a>
@@ -951,6 +956,28 @@
                     Acceso Anticipado
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
+                <div class="hero-stores">
+                    <svg width="140" height="42" viewBox="0 0 180 52" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="180" height="52" rx="8" fill="#000"/>
+                        <g fill="#fff">
+                            <path d="M38.5 26.2c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-2-.2-3.8 1.2-4.8 1.2s-2.5-1.1-4.1-1.1c-2.1 0-4.1 1.2-5.2 3.1-2.2 3.8-.6 9.5 1.6 12.6 1.1 1.5 2.3 3.2 4 3.1 1.6-.1 2.2-1 4.1-1s2.5 1 4.1 1 2.8-1.5 3.9-3.1c1.2-1.8 1.7-3.5 1.8-3.6-.1 0-3.5-1.3-3.5-5z"/>
+                            <path d="M35.2 16.8c.9-1.1 1.5-2.5 1.3-4-1.3.1-2.8.8-3.8 1.9-.8 1-1.5 2.5-1.3 4 1.4.1 2.9-.7 3.8-1.9z"/>
+                        </g>
+                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Próximamente</text>
+                        <text fill="#fff" font-size="14" font-weight="700" x="50" y="36">App Store</text>
+                    </svg>
+                    <svg width="140" height="42" viewBox="0 0 180 52" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="180" height="52" rx="8" fill="#000"/>
+                        <g transform="translate(16,12)" fill="#fff">
+                            <path d="M1.3 0L14.5 13.5 1.3 27c-.4-.4-.3-1.1-.3-1.1V1.1S.9.4 1.3 0z" fill="#4285F4"/>
+                            <path d="M18.8 10L14.5 13.5 18.8 17l5-2.8c.8-.5.8-1.4 0-1.9L18.8 10z" fill="#FBBC04"/>
+                            <path d="M1.3 0s.5-.2 1.2.2L14.5 13.5 1.3 0z" fill="#34A853"/>
+                            <path d="M14.5 13.5L2.5 27.2c-.7.4-1.2.2-1.2.2L14.5 13.5z" fill="#EA4335"/>
+                        </g>
+                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Próximamente</text>
+                        <text fill="#fff" font-size="14" font-weight="700" x="50" y="36">Google Play</text>
+                    </svg>
+                </div>
             </div>
             <div class="hero-image">
                 <img src="carlos.png" alt="Latino enviando dinero con Billete">
@@ -1195,41 +1222,6 @@
         </div>
     </section>
 
-    <!-- DESCARGA -->
-    <section class="download" aria-labelledby="download-title">
-        <div class="download-inner">
-            <img class="download-logo" src="billete-icon.png" alt="Billete wallet icon">
-            <h2 class="section-title" id="download-title">Descarga Billete</h2>
-            <p class="section-subtitle">Disponible para iOS y Android. Descarga la app y empieza a enviar dólares gratis.</p>
-            <div class="download-badges">
-                <a href="#" class="store-link">
-                    <svg class="store-badge" viewBox="0 0 180 52" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="180" height="52" rx="8" fill="#000"/>
-                        <g fill="#fff">
-                            <path d="M38.5 26.2c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-2-.2-3.8 1.2-4.8 1.2s-2.5-1.1-4.1-1.1c-2.1 0-4.1 1.2-5.2 3.1-2.2 3.8-.6 9.5 1.6 12.6 1.1 1.5 2.3 3.2 4 3.1 1.6-.1 2.2-1 4.1-1s2.5 1 4.1 1 2.8-1.5 3.9-3.1c1.2-1.8 1.7-3.5 1.8-3.6-.1 0-3.5-1.3-3.5-5z"/>
-                            <path d="M35.2 16.8c.9-1.1 1.5-2.5 1.3-4-1.3.1-2.8.8-3.8 1.9-.8 1-1.5 2.5-1.3 4 1.4.1 2.9-.7 3.8-1.9z"/>
-                        </g>
-                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Disponible en</text>
-                        <text fill="#fff" font-size="14" font-weight="700" x="50" y="36">App Store</text>
-                    </svg>
-                </a>
-                <a href="#" class="store-link">
-                    <svg class="store-badge" viewBox="0 0 180 52" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="180" height="52" rx="8" fill="#000"/>
-                        <g transform="translate(16,12)" fill="#fff">
-                            <path d="M1.3 0L14.5 13.5 1.3 27c-.4-.4-.3-1.1-.3-1.1V1.1S.9.4 1.3 0z" fill="#4285F4"/>
-                            <path d="M18.8 10L14.5 13.5 18.8 17l5-2.8c.8-.5.8-1.4 0-1.9L18.8 10z" fill="#FBBC04"/>
-                            <path d="M1.3 0s.5-.2 1.2.2L14.5 13.5 1.3 0z" fill="#34A853"/>
-                            <path d="M14.5 13.5L2.5 27.2c-.7.4-1.2.2-1.2.2L14.5 13.5z" fill="#EA4335"/>
-                        </g>
-                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Disponible en</text>
-                        <text fill="#fff" font-size="14" font-weight="700" x="50" y="36">Google Play</text>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA -->
     <section class="cta" id="waitlist" aria-labelledby="cta-title">
         <h2 id="cta-title">Sé de los Primeros</h2>
@@ -1244,7 +1236,7 @@
     <!-- FOOTER -->
     <footer role="contentinfo">
         <div class="footer-logo">
-            <img src="billete-logo-horizontal.png" alt="Billete">
+            <img src="billete-logo-full.png" alt="Billete">
         </div>
         <p>&copy; 2026 Billete Global Inc. Delaware, USA. &nbsp;|&nbsp; <a href="mailto:soporte@billete.com">soporte@billete.com</a></p>
     </footer>
