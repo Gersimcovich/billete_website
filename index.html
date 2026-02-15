@@ -132,7 +132,7 @@
         }
 
         .nav-logo img {
-            height: 72px;
+            height: 50px;
         }
 
         .nav-links {
@@ -190,8 +190,8 @@
         }
 
         .hero-image {
-            max-width: 280px;
-            margin-right: -40px;
+            max-width: 400px;
+            margin-right: -20px;
         }
 
         .hero-image img {
@@ -259,6 +259,36 @@
             gap: 12px;
             margin-top: 24px;
             opacity: 0.85;
+        }
+
+        .hero-stores svg {
+            height: 52px;
+            width: 220px;
+        }
+
+        /* HAMBURGER */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            margin: 6px 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .comp-table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 48px;
+            border-radius: 16px;
         }
 
         .hero-stats {
@@ -431,9 +461,12 @@
 
         .countries-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .country-card {
@@ -642,7 +675,6 @@
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            margin-top: 48px;
             border-radius: 16px;
             overflow: hidden;
             background: var(--white);
@@ -826,36 +858,64 @@
             color: var(--white);
         }
 
-        /* MOBILE */
+        /* TABLET */
         @media (max-width: 768px) {
             nav {
                 padding: 12px 20px;
             }
 
             .nav-logo img {
-                height: 44px;
+                height: 36px;
             }
 
-            .countries-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 12px;
+            .hamburger {
+                display: block;
             }
 
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 20px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 17px;
+                padding: 8px 0;
             }
 
             .hero {
-                padding: 100px 20px 60px;
+                padding: 90px 20px 40px;
+                min-height: auto;
             }
 
             .hero-inner {
                 grid-template-columns: 1fr;
                 text-align: center;
+                gap: 24px;
             }
 
             .hero-text {
                 text-align: center;
+                order: 1;
+            }
+
+            .hero-image {
+                order: 2;
+                max-width: 260px;
+                margin: 0 auto;
             }
 
             .hero-subtitle {
@@ -863,23 +923,47 @@
                 margin-right: auto;
             }
 
-            .hero-image {
-                max-width: 240px;
-                margin: 0 auto;
+            .hero-stores {
+                justify-content: center;
+                flex-wrap: wrap;
             }
 
-            .hero-stats {
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
+            .hero-stores svg {
+                width: 180px;
+                height: 44px;
+            }
+
+            .hero-cta {
+                font-size: 16px;
+                padding: 14px 32px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                letter-spacing: -1px;
+            }
+
+            .hero-badge {
+                font-size: 12px;
+                padding: 6px 16px;
             }
 
             .problem-stats {
                 grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .problem h2 {
+                font-size: 28px;
+            }
+
+            .problem p.desc {
+                font-size: 16px;
             }
 
             .solution-grid {
                 grid-template-columns: 1fr;
+                gap: 16px;
             }
 
             .steps {
@@ -887,15 +971,26 @@
                 gap: 16px;
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
+            .countries-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
             }
 
-            .market-stats {
-                grid-template-columns: 1fr 1fr;
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .feature {
+                padding: 28px 24px;
+            }
+
+            .comp-table-wrapper {
+                margin-top: 32px;
             }
 
             .comp-table {
+                min-width: 500px;
                 font-size: 13px;
             }
 
@@ -909,24 +1004,96 @@
                 flex-direction: column;
             }
 
-            .problem, .solution, .how, .countries, .features, .market, .competition, .download, .cta {
-                padding: 80px 20px;
+            .problem, .solution, .how, .countries, .features, .competition, .cta {
+                padding: 64px 20px;
             }
 
-            .store-badge {
-                height: 44px;
+            .section-title {
+                font-size: 26px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
             }
 
             footer {
                 flex-direction: column;
                 gap: 16px;
                 text-align: center;
+                padding: 32px 20px;
+            }
+
+            .footer-logo img {
+                height: 32px;
             }
         }
 
+        /* SMALL PHONE */
         @media (max-width: 480px) {
-            .market-stats {
-                grid-template-columns: 1fr;
+            .hero {
+                padding: 80px 16px 32px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+                letter-spacing: -0.5px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .hero-image {
+                max-width: 220px;
+            }
+
+            .hero-stores {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-stores svg {
+                width: 200px;
+                height: 48px;
+            }
+
+            .countries-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .country-card {
+                padding: 20px 8px;
+            }
+
+            .problem, .solution, .how, .countries, .features, .competition, .cta {
+                padding: 48px 16px;
+            }
+
+            .problem-stat h3 {
+                font-size: 32px;
+            }
+
+            .step {
+                padding: 28px 16px;
+            }
+
+            .solution-card {
+                padding: 28px 20px;
+            }
+
+            .cta h2 {
+                font-size: 24px;
+            }
+
+            .waitlist-form input,
+            .waitlist-form button {
+                font-size: 15px;
+                padding: 14px 16px;
+            }
+
+            footer p {
+                font-size: 12px;
             }
         }
     </style>
@@ -936,8 +1103,13 @@
     <!-- NAVIGATION -->
     <nav role="navigation" aria-label="Navegación principal">
         <a href="#" class="nav-logo">
-            <img src="billete-logo-full.png" alt="Billete">
+            <img src="billete-logo-print.png" alt="Billete">
         </a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-links">
             <a href="#solucion">Solución</a>
             <a href="#como-funciona">Cómo Funciona</a>
@@ -957,25 +1129,25 @@
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <div class="hero-stores">
-                    <svg width="140" height="42" viewBox="0 0 180 52" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="180" height="52" rx="8" fill="#000"/>
+                    <svg viewBox="0 0 220 52" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="220" height="52" rx="8" fill="#000"/>
                         <g fill="#fff">
                             <path d="M38.5 26.2c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-2-.2-3.8 1.2-4.8 1.2s-2.5-1.1-4.1-1.1c-2.1 0-4.1 1.2-5.2 3.1-2.2 3.8-.6 9.5 1.6 12.6 1.1 1.5 2.3 3.2 4 3.1 1.6-.1 2.2-1 4.1-1s2.5 1 4.1 1 2.8-1.5 3.9-3.1c1.2-1.8 1.7-3.5 1.8-3.6-.1 0-3.5-1.3-3.5-5z"/>
                             <path d="M35.2 16.8c.9-1.1 1.5-2.5 1.3-4-1.3.1-2.8.8-3.8 1.9-.8 1-1.5 2.5-1.3 4 1.4.1 2.9-.7 3.8-1.9z"/>
                         </g>
-                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Próximamente</text>
-                        <text fill="#fff" font-size="14" font-weight="700" x="50" y="36">App Store</text>
+                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Pr&#243;ximamente</text>
+                        <text fill="#fff" font-size="15" font-weight="700" x="50" y="37">App Store</text>
                     </svg>
-                    <svg width="140" height="42" viewBox="0 0 180 52" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="180" height="52" rx="8" fill="#000"/>
+                    <svg viewBox="0 0 220 52" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="220" height="52" rx="8" fill="#000"/>
                         <g transform="translate(16,12)" fill="#fff">
                             <path d="M1.3 0L14.5 13.5 1.3 27c-.4-.4-.3-1.1-.3-1.1V1.1S.9.4 1.3 0z" fill="#4285F4"/>
                             <path d="M18.8 10L14.5 13.5 18.8 17l5-2.8c.8-.5.8-1.4 0-1.9L18.8 10z" fill="#FBBC04"/>
                             <path d="M1.3 0s.5-.2 1.2.2L14.5 13.5 1.3 0z" fill="#34A853"/>
                             <path d="M14.5 13.5L2.5 27.2c-.7.4-1.2.2-1.2.2L14.5 13.5z" fill="#EA4335"/>
                         </g>
-                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Próximamente</text>
-                        <text fill="#fff" font-size="14" font-weight="700" x="50" y="36">Google Play</text>
+                        <text fill="#fff" font-size="8" font-weight="400" x="50" y="20">Pr&#243;ximamente</text>
+                        <text fill="#fff" font-size="15" font-weight="700" x="50" y="37">Google Play</text>
                     </svg>
                 </div>
             </div>
@@ -1068,23 +1240,8 @@
             <p class="section-subtitle">Transferencias instantáneas a los países con mayor recepción de remesas del continente.</p>
             <div class="countries-grid">
                 <div class="country-card">
-                    <img class="country-flag" src="flags/arg.png" alt="Argentina">
-                    <h4>Argentina</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
                     <img class="country-flag" src="flags/col.png" alt="Colombia">
                     <h4>Colombia</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/ven.png" alt="Venezuela">
-                    <h4>Venezuela</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/per.png" alt="Peru">
-                    <h4>Peru</h4>
                     <span class="delivery">Instantáneo</span>
                 </div>
                 <div class="country-card">
@@ -1093,13 +1250,28 @@
                     <span class="delivery">Instantáneo</span>
                 </div>
                 <div class="country-card">
-                    <img class="country-flag" src="flags/chi.png" alt="Chile">
-                    <h4>Chile</h4>
+                    <img class="country-flag" src="flags/per.png" alt="Perú">
+                    <h4>Perú</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
+                    <img class="country-flag" src="flags/ven.png" alt="Venezuela">
+                    <h4>Venezuela</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
+                    <img class="country-flag" src="flags/arg.png" alt="Argentina">
+                    <h4>Argentina</h4>
                     <span class="delivery">Instantáneo</span>
                 </div>
                 <div class="country-card">
                     <img class="country-flag" src="flags/bol.png" alt="Bolivia">
                     <h4>Bolivia</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
+                    <img class="country-flag" src="flags/chi.png" alt="Chile">
+                    <h4>Chile</h4>
                     <span class="delivery">Instantáneo</span>
                 </div>
                 <div class="country-card">
@@ -1110,11 +1282,6 @@
                 <div class="country-card">
                     <img class="country-flag" src="flags/uru.png" alt="Uruguay">
                     <h4>Uruguay</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/usa.png" alt="Estados Unidos">
-                    <h4>EE.UU.</h4>
                     <span class="delivery">Instantáneo</span>
                 </div>
             </div>
@@ -1164,6 +1331,7 @@
         <div class="competition-inner">
             <div class="section-label">Competencia</div>
             <h2 class="section-title" id="comp-title">Billete vs. Servicios Tradicionales</h2>
+            <div class="comp-table-wrapper">
             <table class="comp-table" role="table" aria-label="Tabla comparativa de Billete vs competencia">
                 <thead>
                     <tr>
@@ -1219,6 +1387,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </section>
 
@@ -1236,7 +1405,7 @@
     <!-- FOOTER -->
     <footer role="contentinfo">
         <div class="footer-logo">
-            <img src="billete-logo-full.png" alt="Billete">
+            <img src="billete-logo-print.png" alt="Billete">
         </div>
         <p>&copy; 2026 Billete Global Inc. Delaware, USA. &nbsp;|&nbsp; <a href="mailto:soporte@billete.com">soporte@billete.com</a></p>
     </footer>
@@ -1244,11 +1413,16 @@
     <script>
         function handleSubmit(e) {
             e.preventDefault();
-            const email = e.target.email.value;
-            // TODO: Conectar a servicio de email (Mailchimp, Loops, Resend, etc.)
+            var email = e.target.email.value;
             alert('Gracias! Te notificaremos a ' + email + ' cuando lancemos.');
             e.target.reset();
         }
+
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
     </script>
 
 </body>
