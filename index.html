@@ -168,10 +168,9 @@
 
         /* HERO */
         .hero {
-            min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 120px 40px 80px;
+            padding: 100px 40px 48px;
             background: linear-gradient(160deg, var(--white) 0%, #FFF8F2 100%);
             overflow: hidden;
         }
@@ -190,7 +189,7 @@
         }
 
         .hero-image {
-            max-width: 400px;
+            max-width: 320px;
             margin-right: -20px;
         }
 
@@ -207,17 +206,17 @@
             font-weight: 600;
             padding: 8px 20px;
             border-radius: 100px;
-            margin-bottom: 28px;
+            margin-bottom: 16px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
         .hero h1 {
-            font-size: clamp(36px, 5vw, 60px);
+            font-size: clamp(34px, 4.5vw, 54px);
             font-weight: 800;
             line-height: 1.08;
             letter-spacing: -2px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             color: var(--dark);
             text-transform: uppercase;
         }
@@ -227,11 +226,11 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(17px, 2vw, 20px);
+            font-size: clamp(15px, 1.8vw, 18px);
             color: var(--grey);
-            max-width: 650px;
-            line-height: 1.6;
-            margin-bottom: 40px;
+            max-width: 550px;
+            line-height: 1.5;
+            margin-bottom: 28px;
         }
 
         .hero-cta {
@@ -240,9 +239,9 @@
             gap: 12px;
             background: var(--orange);
             color: var(--white);
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            padding: 16px 40px;
+            padding: 14px 32px;
             border-radius: 12px;
             text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -256,14 +255,14 @@
 
         .hero-stores {
             display: flex;
-            gap: 12px;
-            margin-top: 24px;
+            gap: 10px;
+            margin-top: 16px;
             opacity: 0.85;
         }
 
         .hero-stores svg {
-            height: 52px;
-            width: 220px;
+            height: 44px;
+            width: 190px;
         }
 
         /* HAMBURGER */
@@ -1240,8 +1239,33 @@
             <p class="section-subtitle">Transferencias instantáneas a los países con mayor recepción de remesas del continente.</p>
             <div class="countries-grid">
                 <div class="country-card">
+                    <img class="country-flag" src="flags/mex.png" alt="México">
+                    <h4>México</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
+                    <img class="country-flag" src="flags/gua.png" alt="Guatemala">
+                    <h4>Guatemala</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
+                    <img class="country-flag" src="flags/dom.png" alt="República Dominicana">
+                    <h4>Rep. Dominicana</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
                     <img class="country-flag" src="flags/col.png" alt="Colombia">
                     <h4>Colombia</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
+                    <img class="country-flag" src="flags/hon.png" alt="Honduras">
+                    <h4>Honduras</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
+                    <img class="country-flag" src="flags/sal.png" alt="El Salvador">
+                    <h4>El Salvador</h4>
                     <span class="delivery">Instantáneo</span>
                 </div>
                 <div class="country-card">
@@ -1250,38 +1274,13 @@
                     <span class="delivery">Instantáneo</span>
                 </div>
                 <div class="country-card">
+                    <img class="country-flag" src="flags/nic.png" alt="Nicaragua">
+                    <h4>Nicaragua</h4>
+                    <span class="delivery">Instantáneo</span>
+                </div>
+                <div class="country-card">
                     <img class="country-flag" src="flags/per.png" alt="Perú">
                     <h4>Perú</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/ven.png" alt="Venezuela">
-                    <h4>Venezuela</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/arg.png" alt="Argentina">
-                    <h4>Argentina</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/bol.png" alt="Bolivia">
-                    <h4>Bolivia</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/chi.png" alt="Chile">
-                    <h4>Chile</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/par.png" alt="Paraguay">
-                    <h4>Paraguay</h4>
-                    <span class="delivery">Instantáneo</span>
-                </div>
-                <div class="country-card">
-                    <img class="country-flag" src="flags/uru.png" alt="Uruguay">
-                    <h4>Uruguay</h4>
                     <span class="delivery">Instantáneo</span>
                 </div>
             </div>
