@@ -196,13 +196,20 @@
         }
 
         .hero-image {
-            max-width: 320px;
+            max-width: 420px;
             margin-right: -20px;
         }
 
         .hero-image img {
             width: 100%;
             height: auto;
+            animation: gentle-rock 4s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        @keyframes gentle-rock {
+            0%, 100% { transform: rotate(-1.5deg); }
+            50% { transform: rotate(1.5deg); }
         }
 
         .hero-badge {
