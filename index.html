@@ -912,6 +912,11 @@
                 padding: 8px 0;
             }
 
+            .nav-cta {
+                text-align: center;
+                padding: 12px 24px;
+            }
+
             .hero {
                 padding: 90px 20px 40px;
                 min-height: auto;
@@ -930,7 +935,7 @@
 
             .hero-image {
                 order: 2;
-                max-width: 260px;
+                max-width: 280px;
                 margin: 0 auto;
             }
 
@@ -945,13 +950,15 @@
             }
 
             .hero-stores svg {
-                width: 180px;
-                height: 44px;
+                width: 160px;
+                height: 40px;
             }
 
             .hero-cta {
                 font-size: 16px;
-                padding: 14px 32px;
+                padding: 16px 40px;
+                width: 100%;
+                justify-content: center;
             }
 
             .hero h1 {
@@ -962,6 +969,15 @@
             .hero-badge {
                 font-size: 12px;
                 padding: 6px 16px;
+            }
+
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+
+            .hero-stat h3 {
+                font-size: 26px;
             }
 
             .problem-stats {
@@ -1001,6 +1017,15 @@
                 padding: 28px 24px;
             }
 
+            .market-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .market-stat h3 {
+                font-size: 28px;
+            }
+
             .comp-table-wrapper {
                 margin-top: 32px;
             }
@@ -1020,7 +1045,11 @@
                 flex-direction: column;
             }
 
-            .problem, .solution, .how, .countries, .features, .competition, .cta {
+            .waitlist-form button {
+                width: 100%;
+            }
+
+            .problem, .solution, .how, .countries, .features, .market, .competition, .cta {
                 padding: 64px 20px;
             }
 
@@ -1030,6 +1059,16 @@
 
             .section-subtitle {
                 font-size: 16px;
+            }
+
+            .download {
+                padding: 64px 20px;
+            }
+
+            .download-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
             }
 
             footer {
@@ -1056,11 +1095,17 @@
             }
 
             .hero-subtitle {
-                font-size: 15px;
+                font-size: 14px;
+                line-height: 1.5;
             }
 
             .hero-image {
-                max-width: 220px;
+                max-width: 240px;
+            }
+
+            .hero-cta {
+                font-size: 15px;
+                padding: 16px 24px;
             }
 
             .hero-stores {
@@ -1069,8 +1114,18 @@
             }
 
             .hero-stores svg {
-                width: 200px;
-                height: 48px;
+                width: 180px;
+                height: 44px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+            }
+
+            .hero-stat {
+                text-align: center;
             }
 
             .countries-grid {
@@ -1082,12 +1137,34 @@
                 padding: 20px 8px;
             }
 
-            .problem, .solution, .how, .countries, .features, .competition, .cta {
+            .country-flag {
+                width: 40px;
+                height: 40px;
+            }
+
+            .problem, .solution, .how, .countries, .features, .market, .competition, .cta {
                 padding: 48px 16px;
+            }
+
+            .problem-stat {
+                padding: 20px 16px;
             }
 
             .problem-stat h3 {
                 font-size: 32px;
+            }
+
+            .market-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .market-stat {
+                padding: 24px 12px;
+            }
+
+            .market-stat h3 {
+                font-size: 24px;
             }
 
             .step {
@@ -1098,14 +1175,38 @@
                 padding: 28px 20px;
             }
 
+            .solution-icon {
+                width: 52px;
+                height: 52px;
+                border-radius: 14px;
+            }
+
+            .feature {
+                padding: 24px 20px;
+            }
+
+            .feature-icon {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+            }
+
             .cta h2 {
                 font-size: 24px;
+            }
+
+            .cta p {
+                font-size: 16px;
             }
 
             .waitlist-form input,
             .waitlist-form button {
                 font-size: 15px;
                 padding: 14px 16px;
+            }
+
+            .download {
+                padding: 48px 16px;
             }
 
             footer p {
@@ -1138,7 +1239,7 @@
         <div class="hero-inner">
             <div class="hero-text">
                 <div class="hero-badge">Lanzamiento 2026</div>
-                <h1>Remesas Instantáneas <span>Gratis</span></h1>
+                <h1>Remesas Instantáneas y <span>Gratis</span> con Billete</h1>
                 <p class="hero-subtitle">Latinos en Estados Unidos ahora mandan dinero a casa instantáneo y gratis. Sin comisiones, sin bancos y sin esperas. Tus amigos y familia lo reciben al instante.</p>
                 <a href="#waitlist" class="hero-cta">
                     Acceso Anticipado
